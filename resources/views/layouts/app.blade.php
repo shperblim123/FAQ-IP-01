@@ -62,9 +62,16 @@
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+
                                         @csrf
                                     </form>
                                 </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/dashboard/faqs">{{ __('List') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/dashboard/faqs/new">{{ __('Create') }}</a>
                             </li>
                         @endguest
                     </ul>
@@ -73,6 +80,7 @@
         </nav>
 
         <main class="py-4">
+            @include('flash-message')
             @yield('content')
         </main>
     </div>

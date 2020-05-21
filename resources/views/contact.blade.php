@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    Welcome to your Dashboard
+                    Welcome to the contact page
                 </div>
             </div>
         </div>
